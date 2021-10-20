@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// import { saveAs } from 'file-saver/FileSaver';
+import { saveAs } from 'file-saver/FileSaver';
 // import { Component } from '@angular/core';
 import { ExcelService } from '../services/excel.service';
 
@@ -51,8 +51,8 @@ export class AppComponent {
   // }
 
   save() {
-    // const blob = new Blob(['Hello, World!']);
-    // saveAs(blob, 'out.txt');
-    this.excelService.exportAsExcelFile(this.data, 'sample');
+    const blob = new Blob(['Hello, World!']);
+    saveAs(blob, 'out.txt');
+    // this.excelService.exportAsExcelFile(this.data, 'sample');
   }
 }
