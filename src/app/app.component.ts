@@ -37,18 +37,18 @@ export class AppComponent {
 
   constructor(private excelService: ExcelService) {}
 
-  open(event: Event) {
-    if (
-      event.target instanceof HTMLInputElement &&
-      event.target.files.length > 0
-    ) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        this.contents = reader.result as string;
-      };
-      reader.readAsText(event.target.files[0]);
-    }
-  }
+  // open(event: Event) {
+  //   if (
+  //     event.target instanceof HTMLInputElement &&
+  //     event.target.files.length > 0
+  //   ) {
+  //     const reader = new FileReader();
+  //     reader.onloadend = () => {
+  //       this.contents = reader.result as string;
+  //     };
+  //     reader.readAsText(event.target.files[0]);
+  //   }
+  // }
 
   save() {
     // const blob = new Blob(['Hello, World!']);
